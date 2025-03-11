@@ -1,0 +1,8 @@
+Endpoint	      Method	      Description
+/update	        POST	        Upload .bin files for OTA updates.
+/stream	        GET	          Real-time debugging console.
+/debug	        GET	          Poll-based debug log retrieval.
+/list	          GET	          List files in SPIFFS.
+/upload	        POST	        Upload a file to SPIFFS.
+/download	      GET	          Download a file from SPIFFS.
+/delete	        GET	          Delete a file from SPIFFS.
