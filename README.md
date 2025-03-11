@@ -1,11 +1,6 @@
 # RemoteManager for ESP32  
 **A modular library for OTA updates, remote debugging, and file system management on ESP32 devices**  
 
-lib/
-└── RemoteManager/
-    ├── RemoteManager.h
-    ├── RemoteManager.cpp
-    └── secrets.h
     
 ---
 
