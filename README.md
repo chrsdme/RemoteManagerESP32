@@ -41,4 +41,4 @@ RemoteManager is a lightweight, modular library for ESP32-based projects that pr
    platform = espressif32
    framework = arduino
    lib_deps = 
-       [https://github.com/yourusername/RemoteManager.git]
+       [[https://github.com/chrsdme/RemoteManagerESP32/RemoteManager.git](https://github.com/chrsdme/RemoteManagerESP32.git)]
