@@ -1,0 +1,29 @@
+API Documentation
+
+1. OTA Updates 
+Endpoint : /update Method : POST
+Parameters : file: Binary file (fw.bin, fs.bin, or all.bin)
+Response : Success: "Firmware Update successful. Rebooting...", "SPIFFS Update successful. Rebooting...", or "Full Update successful. Rebooting..."
+Failure: "Update failed" 
+
+2. Remote Debugging 
+Endpoint : /stream Method : GET Description : Provides real-time serial output via Server-Sent Events (SSE).
+
+3. File System Management
+List Files : Endpoint : /list Method : GET Response : List of files in SPIFFS.
+Upload File : Endpoint : /upload Method : POST Parameters : file: File to upload Response : "File uploaded: <filename>"
+Download File : Endpoint : /download Method : GET Parameters : file: Filename to download Response : File content.
+Delete File : Endpoint : /delete Method : GET Parameters : file: Filename to delete Response : "File deleted: <filename>"
+
+4. Usage Instructions
+Include the Library : Place the RemoteManager folder in your lib directory or include it as a custom library in your project.
+Minimal Code Integration : Use the provided main.cpp example to initialize and use the library.
+
+5. Access Features : 
+OTA Updates : Use curl or Postman to upload .bin files to http://<ESP_IP>:8080/update.
+Remote Debugging : Open http://<ESP_IP>:8081/stream in your browser or use PlatformIO's serial monitor.
+File System Management :
+List files: http://<ESP_IP>:8080/list
+Upload files: POST to http://<ESP_IP>:8080/upload
+Download files: GET http://<ESP_IP>:8080/download?file=<filename>
+Delete files: GET http://<ESP_IP>:8080/delete?file=<filename>
